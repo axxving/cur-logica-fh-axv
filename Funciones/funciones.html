@@ -5,13 +5,23 @@
   </head>
   <body>
     <script>
-        // Declarando la funcion
+        // Declarando la funcion saludar
         function saludar( name = "ingresa el nombre" ) {
             console.log('Hola como estas: ' + name);
         }
 
         // Llamando a la funcion
         saludar();
+
+        // Declarando la funcion addTwoNumbers
+        function addTwoNumbers(numUno, numDos) {
+            let suma = parseInt(numUno + numDos);
+            console.log('la suma es de: ' + suma);
+            return suma;
+        }
+
+        // Llamando a la funcion
+        addTwoNumbers(10,40);
     </script>
   </body>
 </html>
