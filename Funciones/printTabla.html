@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea: Print Tabla</title>
+</head>
+<body>
+    <script>
+        function generarTabla (num, limite = 10) {
+            let resultados = [];
+            for (i = 1; i <= limite; i++) {
+                let formatTabla = `${num} X ${i} = ${num * i}`; 
+                resultados.push(formatTabla);
+            }
+
+            return resultados;
+        }
+
+        console.log(generarTabla(2,2).join('\n'));
+    </script>
+</body>
+</html>
