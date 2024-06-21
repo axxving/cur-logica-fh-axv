@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos de objetos</title>
+</head>
+<body>
+    <script>
+        // Definiendo una interface
+        interface Persona {
+            nombre: string;
+            edad: number;
+        }
+        // Declarando un objeto
+        let persona1: Persona = {
+            nombre: "Juan",
+            edad: 25
+        }
+
+        let persona2: Persona = {
+            nombre: "Maria",
+            edad: 30
+        }
+
+        // Declarando un array de objetos
+        let gente: Persona[] = [persona1, persona2];
+
+        // Recorriendo el arreglo de objetos
+        for (let i = 0; i < gente.length; i++) {
+            let printPerson = gente[i];
+            console.log(`La persona: ${printPerson.nombre}, tiene ${printPerson.edad} anios`);
+        }
+    </script>
+</body>
+</html>
