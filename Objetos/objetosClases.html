@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos y Clases</title>
+</head>
+<body>
+    <script>
+        let persona = {
+            name: 'nombre',
+            age: 25,
+            isActive: true,
+            hobbies: ['leer', 'correr', 'programar'],
+            toString(edad, name) {
+                let formato = `El nombre del objeto es: ${this.name}, y su edad es de: ${this.age}`;
+                console.log(formato);
+            }
+        }
+
+        persona.toString();
+    </script>
+</body>
+</html>
