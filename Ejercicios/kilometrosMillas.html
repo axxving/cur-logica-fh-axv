@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilometros a millas</title>
+</head>
+<body>
+    <script>
+        // Funcion para convertir de kilometros a millas
+        function kilometrosMillas(kilometros) {
+            // Operacion de kilometros a millas
+            let millas = kilometros * 0.621371;
+            // let millas = (kilometros * 0.621371).toFixed(2);
+
+            // Redondeando valor a dos decimales
+            millas = millas.toFixed(2);
+
+            // Formato de la respuesta
+            let respuesta = `La cantidad de ${kilometros}km, es igual a ${millas}, millas`;
+
+            return respuesta;
+        }
+
+        // Imprimiendo el valor en consola
+        console.log(kilometrosMillas(10));
+    </script>
+</body>
+</html>
