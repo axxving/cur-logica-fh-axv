@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numero par</title>
+  </head>
+  <body>
+    <script>
+      // Lista de numeros
+      let numeros = [1, 2, 3, 4, 5];
+
+      // Lista mas larga de numeros
+      let numerosMasLargos = [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+        21, 22, 23, 24,
+      ];
+
+      // Funcion para obtener los numeros par e impar de un arreglo
+      function obtenerNumerosParImpar(listaNumeros) {
+        // Recorriendo los numeros para obtener los pares e impares del array
+        for (let i = 0; i < listaNumeros.length; i++) {
+          if (listaNumeros[i] % 2 === 0) {
+            console.log(`${listaNumeros[i]}, es un numero par`);
+          } else {
+            console.log(`${listaNumeros[i]}, es un numero impar`);
+          }
+        }
+      }
+
+      // Imprimiendo la respuesta
+      obtenerNumerosParImpar(numerosMasLargos);
+    </script>
+  </body>
+</html>
