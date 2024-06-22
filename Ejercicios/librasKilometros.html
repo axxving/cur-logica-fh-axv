@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De libras a kilometros</title>
+</head>
+<body>
+    <script>
+        // Convertir de libras a kilogramos
+        function librasKilogramos(libras = 0) {
+            // Operacion
+            let resultado = libras * 0.45359237;
+
+            // Formato de la respuesta
+            let formato = `EL valor ingresado de: ${libras}, es igual a ${resultado} en kilogramos`;
+
+            // Retornando el resultado
+            return formato;
+        }
+
+        // Imprimiendo el resultado en la consola
+        console.log(librasKilogramos(15));
+    </script>
+</body>
+</html>
