@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de un triangulo rectangulo</title>
+</head>
+<body>
+    <script>
+        // Funcion que calcula el area de un triangulo rectangulo
+        function area(base, altura) {
+            // Operacion
+            let area = (base * altura) / 2;
+
+            // Formato de la respuesta
+            let respuesta = `El area del triangulo rectangulo es: ${area} unidades duadradas`;
+
+            // Retornando la respuesta
+            return respuesta;
+        }
+
+        // Imprimiendo la respuesta
+        let calculo = area(10, 5);
+        console.log(calculo);
+    </script>
+</body>
+</html>
