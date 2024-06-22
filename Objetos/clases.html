@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        // Clase Galleta
+        class Galleta {
+            // Propiedades tipadas
+            sabor;
+            forma;
+            tamano;
+            precio;
+
+            // Constuctor de la clase
+            constructor(sabor, precio, tamano, forma) {
+                this.sabor = sabor;
+                this.precio = precio;
+                this.tamano = tamano;
+                this.forma = forma;
+            }
+        }
+
+        // Bueva instancia de la clase galleta
+        let myGalleta = new Galleta('Chocolate', 25, 555.5, 'Corazon');
+
+        // Imprimiendo la clase que se genero a traves de "Galleta"
+        console.log(myGalleta);
+    </script>
+</body>
+</html>
