@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numero mayor de un arreglo</title>
+  </head>
+  <body>
+    <script>
+      // Funcion para obtener el numero mayor de un arreglo
+      let numeros = [4, 8, 2, 3, 6, 9, 7, 1, 1, 5, 5, 8, 9];
+
+      function numeroMayor(lista) {
+        // La varible que contendra el numero mayor
+        let mayor = lista[0];
+
+        for (let i = 0; i < lista.length; i++) {
+          // Operacion que obtiene el numero mayor
+          if (lista[i] > mayor) {
+            mayor = lista[i];
+          }
+        }
+
+        // Retorna el mayor
+        return mayor;
+      }
+
+      // Imprimiendo la respuesta
+      console.log(numeroMayor(numeros));
+    </script>
+  </body>
+</html>
