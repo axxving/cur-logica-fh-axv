@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de clases</title>
+</head>
+<body>
+    <script>
+        // Clase carro
+        class Carro {
+            // Atributos
+            marca;
+            precio;
+            ano;
+            modelo;
+            encendido = false;
+
+            // Constructor
+            constructor(marca, precio, ano, modelo, encendido) {
+                this.marca = marca;;
+                this.precio = precio;
+                this.ano = ano;
+                this.modelo = modelo;
+                this,encendido = encendido;
+            }
+
+            // Metodos de la clase carro
+            mostrarInfromacion() {
+                console.log(`Marca: ${this.marca}`);
+            }
+
+            // Encender
+            encender() {
+                this.encendido = true;
+                console.log(`El carro esta encendido, su valor es: ${this.encendido}`);
+            }
+        }
+
+        // Instancia del objeto carro
+        let miCarro = new Carro("Toyota", 20000, 2020, 'Mazda', false)
+
+        miCarro.mostrarInfromacion();
+
+        miCarro.encender();
+    </script>
+</body>
+</html>
