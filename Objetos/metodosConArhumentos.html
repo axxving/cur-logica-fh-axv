@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos con argumentos</title>
+</head>
+<body>
+    <script>
+        // Declarando la clase coche
+        class Coche {
+            // Propiedades de la clase\
+            marca = 'Volswaguen';
+            modelo = 'Masda';
+            año = 2024;
+            color = 'Amarillo';
+            tanque = 0;
+
+            // Constructor de la clase
+            constructor(marca, modelo, año, color, tanque) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.año = año;
+                this.color = color;
+                this.tanque = tanque;
+            }
+
+            // Ver combustibles
+            verCombustible() {
+                console.log(`El coche cuenta con ${this.tanque} litros de gasolina`);
+            }
+
+            // Rellenar tanque
+            rellenarTanque(litros) {
+                if (this.tanque <= 95){
+                    this.tanque = this.tanque + litros;
+                    console.log(`Se han agregado ${litros} litros`)
+                } else if (this.tanque >= 100){
+                    console.error('El tanque esta lleno')
+                }
+            }
+            
+            // Metodos de la clase
+            arrancar() {
+                if (this.tanque <= 20 && this.tanque >= 0) {
+                    console.log('Queda poco combustible');
+                } else if (this.tanque >= 50) {
+                    console.log('El coche arranca con normalidad');
+                }
+            }
+        }
+
+        let choche1 = new Coche('Camioneta', 'Cheyen', 2024, 'Roja', 0);
+
+        choche1.arrancar();
+        choche1.rellenarTanque(50);
+        choche1.arrancar();
+        choche1.rellenarTanque(20);
+        choche1.verCombustible();
+        choche1.rellenarTanque(30);
+        choche1.verCombustible();
+        choche1.rellenarTanque(10);
+    </script>
+</body>
+</html>
