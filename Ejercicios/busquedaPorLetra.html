@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busqueda por letra</title>
+  </head>
+  <body>
+    <script>
+      // Arreglo de personajes de comics tipo string
+      let personajes = [
+        "Iron Man",
+        "Captain America",
+        "Thor",
+        "Hulk",
+        "Black Widow",
+        "Hawkeye",
+        "Spider-Man",
+        "Doctor Strange",
+        "Black Panther",
+        "Captain Marvel",
+      ];
+
+      // Funcion que retorno todos los nombres que contengan una letra
+      function buscarPersonaje(array, letra) {
+        // Verificando que elementos del array contienen la letra ingresada
+        let busqueda = array.filter((name) => name.includes(letra));
+
+        // Retornando los resultados
+        return busqueda;
+      }
+
+      // Imprimiendo la respuesta
+      console.log(buscarPersonaje(personajes, "B"));
+    </script>
+  </body>
+</html>
