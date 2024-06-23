@@ -1,10 +1,11 @@
+import { HangImage } from "./components/HangImage";
 import { letters } from "./helpers/letters";
 
 export const App = () => {
   return (
-    <>
-      {/** Imagenes */}
-      <img src="https://picsum.photos/200/300" alt="Imagen aleatoria" />
+    <div className="app">
+      {/** Imagen del juego */}
+      <HangImage imageNumber={ 5 } />
 
       {/** Palabra oculta */}
       <h3>-----------</h3>
@@ -17,6 +18,6 @@ export const App = () => {
         return <button key={letter}>{letter}</button>;
       })}
       <button>a</button>
-    </>
+    </div>
   );
 };
