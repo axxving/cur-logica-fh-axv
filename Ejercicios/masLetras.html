@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mas letras</title>
+  </head>
+  <body>
+    <script>
+      // Arreglo de nombres de heroes
+      let heroes = [
+        "Iron Man",
+        "Captain Americaaaaaaaaa",
+        "Thor",
+        "Hulk",
+        "Black Widow",
+        "Hawkeye",
+        "Spider-Man",
+        "Doctor Strangeeeeeeeeeeeeeeeeeeeeee",
+      ];
+
+      // Funcion que retorna el nombre con mas letras
+      function masLetras(arreglo) {
+        // Variable que almacena el valor que contenga mas letras
+        let max = arreglo[0];
+        
+        // Recorre cada uno de los elementos del array para comprobar su longitud
+        for (let i = 0; i < arreglo.length; i++) {
+            if (arreglo[i].length > max.length) {
+                max = arreglo[i];
+            }
+        }
+
+        // Retornando el valor
+        return max;
+      } 
+
+      // Imprimiendo el resultado en consola
+      console.log(masLetras(heroes));
+    </script>
+  </body>
+</html>
