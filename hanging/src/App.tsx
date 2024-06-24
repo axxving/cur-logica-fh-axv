@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { HangImage } from "./components/HangImage";
 import { letters } from "./helpers/letters";
+import { getRandomWord } from "./helpers/getRandomWords";
 
 export const App = () => {
   // useState de la palabra
-  const [word, setWord] = useState("COMPUTADORA");
+  const [word, setWord] = useState( getRandomWord );
 
   // Estado que sirve para verificar si el usuario perdio
   const [lose, setLose] = useState(false);
@@ -37,6 +38,7 @@ export const App = () => {
 
     // Verificar el estado de si el usuario perdio o gano para que pueda correr
     if ( lose ) return;
+    if ( won ) return;
 
     if (!word.includes(letter)) {
       // Aumenta el numero de intentos y mantiene el numero en 9
