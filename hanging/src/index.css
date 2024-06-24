@@ -11,7 +11,6 @@ body {
 }
 
 button {
-    margin: 2px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -35,4 +34,15 @@ button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.teclasContainer {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.nuevoJuego {
+    margin-top: 20px;
+    background-color: #3853da;
 }

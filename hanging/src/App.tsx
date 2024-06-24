@@ -5,7 +5,7 @@ import { getRandomWord } from "./helpers/getRandomWords";
 
 export const App = () => {
   // useState de la palabra
-  const [word, setWord] = useState( getRandomWord );
+  const [word, setWord] = useState(getRandomWord);
 
   // Estado que sirve para verificar si el usuario perdio
   const [lose, setLose] = useState(false);
@@ -35,10 +35,9 @@ export const App = () => {
   }, [hiddenWord]);
 
   const checkLetter = (letter: string) => {
-
     // Verificar el estado de si el usuario perdio o gano para que pueda correr
-    if ( lose ) return;
-    if ( won ) return;
+    if (lose) return;
+    if (won) return;
 
     if (!word.includes(letter)) {
       // Aumenta el numero de intentos y mantiene el numero en 9
@@ -59,6 +58,18 @@ export const App = () => {
     setHiddenWord(arrayHideenWord.join(" "));
   };
 
+  const newGame = () => {
+    // Nueva palabra secreta
+    setWord(getRandomWord);
+    // Reinicia el estado de la palabra oculta
+    setHiddenWord("_ ".repeat(word.length));
+    // Reinicia el estado de intentos
+    setAttemps(0);
+    // Reinicia el estado de perder o ganar
+    setLose(false);
+    setWon(false);
+  }
+
   return (
     <div className="app">
       {/** Imagen del juego */}
@@ -76,13 +87,18 @@ export const App = () => {
       {won ? <p>Felicitaciones! Ganaste!</p> : ""}
 
       {/** Botones de letras */}
-      {letters.map((letter) => {
-        return (
-          <button onClick={() => checkLetter(letter)} key={letter}>
-            {letter}
-          </button>
-        );
-      })}
+      <div className="teclasContainer">
+        {letters.map((letter) => {
+          return (
+            <button onClick={() => checkLetter(letter)} key={letter}>
+              {letter}
+            </button>
+          );
+        })}
+      </div>
+
+      {/** Reinicia */}
+      <button onClick={newGame} className="nuevoJuego">Nuevo juego</button>
     </div>
   );
 };
